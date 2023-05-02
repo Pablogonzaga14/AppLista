@@ -17,9 +17,6 @@ public class MainActivity extends AppCompatActivity {
     Pessoa pessoa;
     Pessoa outraPessoa;
 
-    String dadosPessoa;
-    String dadosOutraPessoa;
-
     EditText txtNome;
     EditText txtSobrenome;
     EditText txtCurso;
@@ -28,13 +25,6 @@ public class MainActivity extends AppCompatActivity {
     Button btnLimpar;
     Button btnSalvar;
     Button btnFinalizar;
-
-
-
-
-
-
-
 
     @Override
     //teste pra essa porra
@@ -98,27 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-        /*dadosPessoa = "Primeiro Nome ";
-        dadosPessoa +=  pessoa.getPrimeiroNome();
-        dadosPessoa += "Sobrenome ";
-        dadosPessoa +=  pessoa.getSobrenome();
-        dadosPessoa += "Curso desejado ";
-        dadosPessoa +=  pessoa.getCursoDesejado();
-        dadosPessoa += "Telefone de contato ";
-        dadosPessoa +=  pessoa.getTelefoneContato();
-
-        dadosOutraPessoa = "Primeiro Nome ";
-        dadosOutraPessoa +=  outraPessoa.getPrimeiroNome();
-        dadosOutraPessoa += "Sobrenome ";
-        dadosOutraPessoa +=  outraPessoa.getSobrenome();
-        dadosOutraPessoa += "Curso desejado ";
-        dadosOutraPessoa +=  outraPessoa.getCursoDesejado();
-        dadosOutraPessoa += "Telefone de contato ";
-        dadosOutraPessoa +=  outraPessoa.getTelefoneContato();
-
-         */
 
         Log.i("POOAndroid","Objeto pessoa: "+pessoa.toString());
         Log.i("POOAndroid", "Objeto outraPessoa: "+outraPessoa.toString());
