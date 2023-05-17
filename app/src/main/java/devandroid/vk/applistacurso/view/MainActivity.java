@@ -10,20 +10,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.List;
+
 import devandroid.vk.applistacurso.R;
+import devandroid.vk.applistacurso.controller.CursoController;
 import devandroid.vk.applistacurso.controller.PessoaController;
+import devandroid.vk.applistacurso.model.Curso;
 import devandroid.vk.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
     PessoaController controller;
-
+    CursoController cursoController;
     Pessoa pessoa;
-    Pessoa outraPessoa;
+    List<Curso> listaDeCursos;
 
     String dadosPessoa;
-    String dadosOutraPessoa;
-
     EditText txtNome;
     EditText txtSobrenome;
     EditText txtCurso;
@@ -42,11 +44,12 @@ public class MainActivity extends AppCompatActivity {
         controller = new PessoaController(MainActivity.this);
         controller.toString();
 
+        cursoController = new CursoController();
+        listaDeCursos = cursoController.getListadeCursos();
+
         pessoa = new Pessoa();
         controller.buscar(pessoa);
         // Atribuir contrudo, dados, valores ao objeto.  Conforme o modelo, Template
-
-
         txtNome = findViewById(R.id.txtNome);
         txtSobrenome = findViewById(R.id.txtSobrenome);
         txtCurso = findViewById(R.id.txtCurso);
